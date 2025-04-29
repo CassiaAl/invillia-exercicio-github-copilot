@@ -6,26 +6,33 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f5f5f5;
+  background-color: #e3f2fd;
 }
 
 header {
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
-  background-color: #1a237e;
+  background: linear-gradient(90deg, #1e88e5, #42a5f5);
   color: white;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
   margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 main {
@@ -35,105 +42,66 @@ main {
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  main {
-    grid-template-columns: 2fr 1fr;
-  }
-}
-
 section {
   background-color: white;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 section h3 {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-  color: #1a237e;
+  border-bottom: 2px solid #42a5f5;
+  color: #1e88e5;
 }
 
 .activity-card {
   margin-bottom: 15px;
   padding: 15px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  border-radius: 10px;
+  background-color: #f1f8e9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
-  color: #0066cc;
+  color: #388e3c;
+  font-size: 1.2rem;
 }
 
 .activity-card p {
   margin-bottom: 8px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 button {
-  background-color: #1a237e;
+  background: linear-gradient(90deg, #1e88e5, #42a5f5);
   color: white;
   border: none;
   padding: 10px 15px;
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background-color: #3949ab;
+  background: linear-gradient(90deg, #1565c0, #1e88e5);
+  transform: translateY(-2px);
 }
 
-.message {
-  margin-top: 20px;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.success {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-  border: 1px solid #a5d6a7;
-}
-
-.error {
-  background-color: #ffebee;
-  color: #c62828;
-  border: 1px solid #ef9a9a;
-}
-
-.info {
-  background-color: #d1ecf1;
-  color: #0c5460;
-  border: 1px solid #bee5eb;
-}
-
-.hidden {
-  display: none;
+button:active {
+  transform: translateY(0);
 }
 
 footer {
@@ -141,4 +109,31 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+  font-size: 0.9rem;
+  background-color: #e3f2fd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add cheerful styling for the participants list */
+.activity-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.activity-card ul li {
+  background-color: #ffecb3;
+  color: #5d4037;
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.activity-card ul li:hover {
+  transform: scale(1.05);
+  background-color: #ffe082;
 }
